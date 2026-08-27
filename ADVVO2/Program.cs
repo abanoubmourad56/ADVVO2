@@ -66,44 +66,71 @@ class Program
         //            Console.WriteLine($"[{p.Category}] {p.Name} | Price: ${p.Price} | Stock: {p.Stock}");
         //        });
 
-//// 3.2 Transform Products
+        //// 3.2 Transform Products
 
-//static List<string> TransformProducts(
-//    List<Product> products,
-//    Func<Product, string> transform)
-//        {
-//            return products.Select(transform).ToList();
-//        }
-
-
-//        // Scenario 3: Summary List
-
-//        Console.WriteLine("-- Summary List ---");
-
-//        var summaryList = TransformProducts(
-//            catalog,
-//            p => $"{p.Name} (${p.Price})"
-//        );
-
-//        foreach (var item in summaryList)
-//        {
-//            Console.WriteLine(item);
-//        }
+        //static List<string> TransformProducts(
+        //    List<Product> products,
+        //    Func<Product, string> transform)
+        //        {
+        //            return products.Select(transform).ToList();
+        //        }
 
 
-//        // Scenario 4: Price Label
+        //        // Scenario 3: Summary List
 
-//        Console.WriteLine("\n-- Price Labels ---");
+        //        Console.WriteLine("-- Summary List ---");
 
-//        var priceLabels = TransformProducts(
-//            catalog,
-//            p => $"{p.Name}: {(p.Price > 100 ? "Expensive!" : "Affordable")}"
-//        );
+        //        var summaryList = TransformProducts(
+        //            catalog,
+        //            p => $"{p.Name} (${p.Price})"
+        //        );
 
-//        foreach (var item in priceLabels)
-//        {
-//            Console.WriteLine(item);
-//        }
+        //        foreach (var item in summaryList)
+        //        {
+        //            Console.WriteLine(item);
+        //        }
+
+
+        //        // Scenario 4: Price Label
+
+        //        Console.WriteLine("\n-- Price Labels ---");
+
+        //        var priceLabels = TransformProducts(
+        //            catalog,
+        //            p => $"{p.Name}: {(p.Price > 100 ? "Expensive!" : "Affordable")}"
+        //        );
+
+        //        foreach (var item in priceLabels)
+        //        {
+        //            Console.WriteLine(item);
+        //        }
+
+
+        //// 3.3 Filter Products
+
+        //static List<Product> FilterProducts(
+        //    List<Product> products,
+        //    Predicate<Product> condition)
+        //{
+        //    return products.FindAll(condition);
+        //}
+
+
+        //// Scenario 5: Low-Stock Alert
+
+        //Console.WriteLine("-- Low-Stock Alert ---");
+
+        //var lowStockProducts = FilterProducts(
+        //    catalog,
+        //    p => p.Stock < 20
+        //);
+
+        //foreach (var product in lowStockProducts)
+        //{
+        //    Console.WriteLine(
+        //        $"[LOW STOCK] {product.Name}: only {product.Stock} left!"
+        //    );
+        //}
 
 
     }
