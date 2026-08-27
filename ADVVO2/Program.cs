@@ -36,6 +36,35 @@ class Program
         var under50 = SearchProducts(catalog, p => p.Price < 50);
         var inStock = SearchProducts(catalog, p => p.Stock > 0);
         var clothingUnder100 = SearchProducts(
-            catalog,p => p.Category == "Clothing" && p.Price < 100);
+            catalog, p => p.Category == "Clothing" && p.Price < 100);
+
+//// Task 03 : Custom Report Generator
+
+//        // 3.1 Print Reports
+
+//static void PrintReport(List<Product> products, Action<Product> action)
+//        {
+//            foreach (var product in products)
+//            {
+//                action(product);
+//            }
+//        }
+
+
+//        // Scenario 1: Short Report
+//        Console.WriteLine("-- Short Report ---");
+//        PrintReport(catalog, p =>
+//        {
+//            Console.WriteLine($"{p.Name} - ${p.Price}");
+//        });
+
+
+//        // Scenario 2: Detailed Report
+//        Console.WriteLine("\n-- Detailed Report ---");
+//        PrintReport(catalog, p =>
+//        {
+//            Console.WriteLine($"[{p.Category}] {p.Name} | Price: ${p.Price} | Stock: {p.Stock}");
+//        });
+
     }
 }
