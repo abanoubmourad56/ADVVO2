@@ -38,33 +38,73 @@ class Program
         var clothingUnder100 = SearchProducts(
             catalog, p => p.Category == "Clothing" && p.Price < 100);
 
-//// Task 03 : Custom Report Generator
+        //// Task 03 : Custom Report Generator
 
-//        // 3.1 Print Reports
+        //        // 3.1 Print Reports
 
-//static void PrintReport(List<Product> products, Action<Product> action)
+        //static void PrintReport(List<Product> products, Action<Product> action)
+        //        {
+        //            foreach (var product in products)
+        //            {
+        //                action(product);
+        //            }
+        //        }
+
+
+        //        // Scenario 1: Short Report
+        //        Console.WriteLine("-- Short Report ---");
+        //        PrintReport(catalog, p =>
+        //        {
+        //            Console.WriteLine($"{p.Name} - ${p.Price}");
+        //        });
+
+
+        //        // Scenario 2: Detailed Report
+        //        Console.WriteLine("\n-- Detailed Report ---");
+        //        PrintReport(catalog, p =>
+        //        {
+        //            Console.WriteLine($"[{p.Category}] {p.Name} | Price: ${p.Price} | Stock: {p.Stock}");
+        //        });
+
+//// 3.2 Transform Products
+
+//static List<string> TransformProducts(
+//    List<Product> products,
+//    Func<Product, string> transform)
 //        {
-//            foreach (var product in products)
-//            {
-//                action(product);
-//            }
+//            return products.Select(transform).ToList();
 //        }
 
 
-//        // Scenario 1: Short Report
-//        Console.WriteLine("-- Short Report ---");
-//        PrintReport(catalog, p =>
+//        // Scenario 3: Summary List
+
+//        Console.WriteLine("-- Summary List ---");
+
+//        var summaryList = TransformProducts(
+//            catalog,
+//            p => $"{p.Name} (${p.Price})"
+//        );
+
+//        foreach (var item in summaryList)
 //        {
-//            Console.WriteLine($"{p.Name} - ${p.Price}");
-//        });
+//            Console.WriteLine(item);
+//        }
 
 
-//        // Scenario 2: Detailed Report
-//        Console.WriteLine("\n-- Detailed Report ---");
-//        PrintReport(catalog, p =>
+//        // Scenario 4: Price Label
+
+//        Console.WriteLine("\n-- Price Labels ---");
+
+//        var priceLabels = TransformProducts(
+//            catalog,
+//            p => $"{p.Name}: {(p.Price > 100 ? "Expensive!" : "Affordable")}"
+//        );
+
+//        foreach (var item in priceLabels)
 //        {
-//            Console.WriteLine($"[{p.Category}] {p.Name} | Price: ${p.Price} | Stock: {p.Stock}");
-//        });
+//            Console.WriteLine(item);
+//        }
+
 
     }
 }
